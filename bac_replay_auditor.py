@@ -197,7 +197,7 @@ class BurpExtender(IBurpExtender, ITab, IProxyListener):
         config.add(self.capture_status_label, gbc)
 
         self.table_model = ReadOnlyTableModel(
-            ["Method", "Endpoint", "Admin Status", "Low-Priv Status", "Admin Body Length (B)", "Low-Priv Body Length (B)", "Result Analysis"], 0
+            ["Method", "Endpoint", "Admin Status", "Low-Priv Status", "Admin Length", "Low-Priv Length", "Result Analysis"], 0
         )
         self.results_table = JTable(self.table_model)
 
@@ -224,11 +224,11 @@ class BurpExtender(IBurpExtender, ITab, IProxyListener):
         self.results_table.setComponentPopupMenu(popup)
         self.results_table.addMouseListener(_SelectCellOnPopupListener(self))
         self.results_table.getColumnModel().getColumn(0).setPreferredWidth(70)
-        self.results_table.getColumnModel().getColumn(1).setPreferredWidth(400)
+        self.results_table.getColumnModel().getColumn(1).setPreferredWidth(415)
         self.results_table.getColumnModel().getColumn(2).setPreferredWidth(100)
         self.results_table.getColumnModel().getColumn(3).setPreferredWidth(120)
-        self.results_table.getColumnModel().getColumn(4).setPreferredWidth(145)
-        self.results_table.getColumnModel().getColumn(5).setPreferredWidth(155)
+        self.results_table.getColumnModel().getColumn(4).setPreferredWidth(135)
+        self.results_table.getColumnModel().getColumn(5).setPreferredWidth(145)
         self.results_table.getColumnModel().getColumn(6).setPreferredWidth(280)
 
         self.main_panel.add(config, BorderLayout.NORTH)
