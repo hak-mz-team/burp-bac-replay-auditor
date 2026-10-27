@@ -1,5 +1,3 @@
-
-
 from burp import IBurpExtender, ITab, IProxyListener
 
 from java.util import ArrayList
@@ -226,7 +224,7 @@ class BurpExtender(IBurpExtender, ITab, IProxyListener):
         self.results_table.setComponentPopupMenu(popup)
         self.results_table.addMouseListener(_SelectCellOnPopupListener(self))
         self.results_table.getColumnModel().getColumn(0).setPreferredWidth(70)
-        self.results_table.getColumnModel().getColumn(1).setPreferredWidth(620)
+        self.results_table.getColumnModel().getColumn(1).setPreferredWidth(400)
         self.results_table.getColumnModel().getColumn(2).setPreferredWidth(100)
         self.results_table.getColumnModel().getColumn(3).setPreferredWidth(120)
         self.results_table.getColumnModel().getColumn(4).setPreferredWidth(145)
